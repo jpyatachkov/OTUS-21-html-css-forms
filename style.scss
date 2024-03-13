@@ -1,0 +1,44 @@
+$space: 4px;
+$space-5: 5 * $space;
+$space-6: 6 * $space;
+
+@mixin flex ($align-items: center, $direction: column, $justify-content: center, $gap: $space-6) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+@mixin no-margin () {
+    margin: 0;
+}
+
+.modal {
+    border: none;
+    border-radius: 6px;
+}
+
+.modal-form {
+    padding: $space-5;
+
+    @include flex();
+
+    &__input {
+        width: 100%;
+    }
+
+    &__label {
+        @include flex($align-items: flex-start, $gap: $space);
+        width: 320px;
+    }
+
+    &__textarea {
+        width: 100%;
+        resize: none;
+    }
+
+    &__title, &__subtitle {
+        @include no-margin();
+    }
+}

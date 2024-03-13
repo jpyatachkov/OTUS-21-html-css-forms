@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как форма работает в диалоге</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Заголовок контента</h1>
+
+    <div>
+        <button onclick="window.modal.showModal()">Открыть диалог</button>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptate, voluptatibus consectetur nostrum qui quis rem minima distinctio, nihil accusamus nulla obcaecati! In quibusdam doloremque praesentium ea architecto eius at.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptate, voluptatibus consectetur nostrum qui quis rem minima distinctio, nihil accusamus nulla obcaecati! In quibusdam doloremque praesentium ea architecto eius at.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptate, voluptatibus consectetur nostrum qui quis rem minima distinctio, nihil accusamus nulla obcaecati! In quibusdam doloremque praesentium ea architecto eius at.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptate, voluptatibus consectetur nostrum qui quis rem minima distinctio, nihil accusamus nulla obcaecati! In quibusdam doloremque praesentium ea architecto eius at.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptate, voluptatibus consectetur nostrum qui quis rem minima distinctio, nihil accusamus nulla obcaecati! In quibusdam doloremque praesentium ea architecto eius at.</p>
+
+    <dialog id="modal" class="modal">
+        <form class="modal-form" method="dialog" aria-labelledby="modal-form-name">
+            <h2 id="modal-form-name" class="modal-form__title">Get in Touch</h2>
+            <p class="modal-form__subtitle">Do you have any questions? Have something to say? Don't be shy, write to us:</p>
+            
+            <label class="modal-form__label">
+                Name
+                <input 
+                    class="modal-form__input"
+                    minlength="3" 
+                    name="name"
+                    placeholder="3+ Characters"
+                >
+            </label>
+
+            <label class="modal-form__label">
+                E-mail
+                <input 
+                    class="modal-form__input"
+                    name="email"
+                    placeholder="name@email.com"
+                    type="email"
+                >
+            </label>
+
+            <label class="modal-form__label">
+                Comment
+                <textarea
+                    class="modal-form__textarea"
+                    name="comment"
+                    placeholder="Some text..."
+                    rows="5"
+                ></textarea>
+            </label>
+
+            <div>
+                <button onclick="window.modal.close()">Cancel</button>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>

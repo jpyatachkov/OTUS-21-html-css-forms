@@ -1,0 +1,31 @@
+.modal {
+  border: none;
+  border-radius: 6px;
+}
+
+.modal-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.modal-form__input {
+  width: 100%;
+}
+.modal-form__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  width: 320px;
+}
+.modal-form__textarea {
+  width: 100%;
+  resize: none;
+}
+.modal-form__title, .modal-form__subtitle {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

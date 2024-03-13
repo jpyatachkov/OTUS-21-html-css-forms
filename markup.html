@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Верстка форм</title>
+</head>
+<body>
+    <h1>Верстка форм</h1>
+
+    <form>
+        <!-- Раздел 1: input и label -->
+        <label for="name-input">Name</label>
+        <input id="name-input" name="name" placeholder="3+ Characters">
+
+        <!-- То же самое, только менее многословно -->
+        <label>
+            Name
+            <input
+                name="name" 
+                placeholder="3+ Characters" 
+                value="Этим будет предзаполнен инпут"
+            >
+        </label>
+
+        <!-- Раздел 2: Типы input -->
+        <!-- https://doka.guide/html/input/#type -->
+        <!-- text — поле для ввода текста в одну строку. Если попробовать вставить текст из нескольких абзацев, то они всё равно сложатся в одну строчку.
+        email — поле для ввода имейла. Браузер проверит, есть ли в нём знак «@» и домен.
+        search — поле для поиска.
+        tel — поле для ввода номера телефона.
+        url — поле для ввода URL-адреса.
+        password — ввод пароля. По мере ввода символы будут меняться на звёздочки ***. Можно задать минимальное и максимальное количество символов с помощью атрибутов minlength и maxlength.
+        number — ввод числа.
+
+        date — ввод даты без времени: год, месяц и дата.
+        datetime-local — ввод даты и времени в текущем часовом поясе, когда зоны UTC не указываются.
+        month — ввод месяца и года, без указания часового пояса.
+        week — ввод номера недели.
+        time — ввод времени без указания часового пояса.
+
+        checkbox — флажки, или чекбокс, с несколькими вариантами на выбор.
+        radio — круглая кнопка-переключатель для выбора одного из нескольких вариантов.
+        range — ползунок для выбора чисел из заданного диапазона.
+        color — виджет для выбора цвета. Иногда его называют колорпикер (от английского colorpicker).
+        file — выбор файла для отправки. -->
+        <label>
+            Input of type
+            <input 
+                name="name"
+                required
+                type="number"
+                min="3"
+                step="0.1"
+            >
+        </label>
+
+        <!-- Раздел 3: fieldset -->
+        <fieldset>
+            <legend>Информация о физическом лице</legend>
+
+            <label>
+                Фамилия
+                <input name="lastname">
+            </label>
+
+            <label>
+                Имя
+                <input name="firstname">
+            </label>
+
+            <label>
+                Отчество
+                <input name="patronymic">
+            </label>
+
+            <label>
+                Дата рождения
+                <input name="birthdate" type="date" min="1920-01-01">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Как вы узнали о нас</legend>
+
+            <label>
+                <input name="how" type="radio" value="internet">
+                Из интернета
+            </label>
+
+            <label>
+                <input name="how" type="radio" value="friends">
+                От друзей
+            </label>
+
+            <label>
+                <input name="how" type="radio" value="email">
+                Через email-рассылку
+            </label>
+
+            <label>
+                <input name="how" type="radio" value="ads">
+                Из рекламы
+            </label>
+        </fieldset>
+
+        <!-- Раздел 3: кнопки отправки и сброса -->
+        <button type="reset">Очистить форму</button>
+        <button type="submit">Отправить форму</button>
+    </form>
+</body>
+</html>
